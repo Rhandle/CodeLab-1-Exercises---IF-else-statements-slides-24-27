@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	//Exercise 2, Slide 25
+	cout << "Enter a number to indicate if it is positive, negative or zero" << endl;
+	int num;
+	cin >> num;
+	if (num > 0) {
+		cout << "This number is positive" << endl;
+	}
+	else if (num < 0) {
+		cout << "This number is negative" << endl;
+	}
+	else if (num == 0) {
+		cout << "This number is a zero" << endl;
+	}
+	else {
+		cout << "Invalid" << endl;
+	}
+	cin.get();
+	return 0;
+}
