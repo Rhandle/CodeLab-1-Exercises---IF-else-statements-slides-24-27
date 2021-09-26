@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	//Exercise 1, Slide 24
+	cout << "Insert a number to determine if it is even, or odd" << endl;
+	int num;
+	cin >> num;
+	double res = num % 2;
+	if (res == 0) {
+		cout << "This number is even" << endl;
+	}
+	else if (res != 0) {
+		cout << "This number is odd" << endl;
+	}
+	else {
+		cout << "Invalid" << endl;
+	}
+	cin.get();
+	return 0;
+}
