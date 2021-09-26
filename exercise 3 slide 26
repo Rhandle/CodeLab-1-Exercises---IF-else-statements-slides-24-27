@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	//Exercise 3, Slide 26
+	cout << "Greetings Mr./Ms. Clerk. Please enter the stock price of the item you sold" << endl;
+	int scost;
+	cin >> scost;
+	cout << "The item's stock price is " << scost << ". Please enter the selling price of the item you sold" << endl;
+	int sprice;
+	cin >> sprice;
+	int sale = sprice - scost;
+	if (sale > 0) {
+		cout << "You made " << sale << ". This item is profitable" << endl;
+	}
+	else if (sale <= 0) {
+		cout << "You made " << sale << ". This item is not profitable" << endl;
+	}
+	else {
+		cout << "Invalid" << endl;
+	}
+
+	cin.get();
+	return 0;
+}
