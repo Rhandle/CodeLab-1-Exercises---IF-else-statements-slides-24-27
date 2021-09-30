@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+#include <stdlib.h> // Needed for rand() and srand() functions
+#include <time.h> // Gets the local time with time function
+
+using namespace std;
+int main()
+{
+	string randtext[2] = { "I'll get there in 15 minutes!", "It'll take more than 15 minutes for me to get there" };
+	string resp;
+	srand(time(0)); // Generates a random seed for rand() based on the local time
+	int randind = rand() % 2; //Generates a number between 0 and 1 everytime the program runs
+	cout << "You are waiting in Dubai Mall for your friend. What do you do?" << endl;
+	cin >> resp;
+	
+	cout << "Regardless, your friend texts you on the phone. What they say is:" << endl;
+	cout << randtext[randind] << endl;
+	if (randind == 0) {
+		cout << "You decided to just wait in one of the mall's cafeterias since your friend will arrive anytime now" << endl;
+	}
+	else if (randtext[randind] == randtext[1]) {
+		cout << "You can go wait in a nearby coffee shop and buy a drink there, if you have 5 AED. Do you have the money? Enter 1 if yes, 0 if no" << endl;
+		bool monz;
+		cin >> monz;
+		if (monz == true) {
+			cout << "You can go drink something there while you wait for your friend" << endl;
+		}
+		else if (monz == false) {
+			cout << "Go take a walk around the mall until your friend arrives. A more productive way of doing things, yes?" << endl;
+		}
+	}
+	
+	cin.get();
+	return 0;
+}
