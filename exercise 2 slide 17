@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+int main()
+{
+	bool musicfriend;
+	string instrument;
+	
+	cout << "Do you have a friend you can start a band with? Enter 1 if yes, 0 if no" << endl;
+	cin >> musicfriend;
+	if (musicfriend == true) {
+		cout << "What musical instrument do they play?" << endl;
+		cin >> instrument;
+		for (int x = 0; x < size(instrument); x++)
+		instrument[x] = tolower(instrument[x]); //Wanted to learn loops so I don't have to go through the hassle of adding in extra conditions for capitalizations
+		if (instrument == "guitar" || instrument == "drums") {
+			cout << "They qualify!" << endl;
+		}
+		else {
+			cout << "You have to find another friend, unfortunately" << endl;
+		}
+	}
+	else if (musicfriend == false){
+		cout << "Maybe you should make a friend who plays a musical instrument" << endl;
+		cout << "Or just give up" << endl;
+	}
+	cin.get();
+	return 0;
+	{
+
+	}
+}
