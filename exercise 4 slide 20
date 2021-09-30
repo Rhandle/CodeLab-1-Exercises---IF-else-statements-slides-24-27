@@ -1,0 +1,45 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+int main()
+{
+	bool earthquake = true;
+	double magnitude;
+	cout << "Enter a number to indicate the magnitude of an earthquake." << endl;
+	cin >> magnitude;
+	if (earthquake == true) {
+		if (magnitude > 0 && magnitude < 2.0) {
+			cout << "This is considered a micro earthquake. Pansy." << endl;
+		}
+		else if (magnitude >= 2.0 && magnitude < 3.0) {
+			cout << "This is considered a very minor earthquake. Just stand still and you'll be alright." << endl;
+		}
+		else if (magnitude >= 3.0 && magnitude < 4.0) {
+			cout << "This is considered a minor earthquake. Hope you know how to balance yourself." << endl;
+		}
+		else if (magnitude >= 4.0 && magnitude < 5.0) {
+			cout << "This is considered a light earthquake. Don't go outside." << endl;
+		}
+		else if (magnitude >= 5.0 && magnitude < 6.0) {
+			cout << "This is considered a moderate earthquake. Hide under a table." << endl;
+		}
+		else if (magnitude >= 6.0 && magnitude < 7.0) {
+			cout << "This is considered a strong earthquake. Run." << endl;
+		}
+		else if (magnitude >= 7.0 && magnitude < 8.0) {
+			cout << "This is considered a major earthquake. Better be prepared before it comes to you." << endl;
+		}
+		else if (magnitude >= 8.0 && magnitude < 10.0) {
+			cout << "This is considered a great earthquake. Pray." << endl;
+		}
+		else if (magnitude > 10) {
+			cout << "This is considered a catastrophic earthquake. There is no escape but the sky." << endl;
+		}
+		else {
+			cout << "???" << endl;
+		}
+	}
+	cin.get();
+	return 0;
+}
