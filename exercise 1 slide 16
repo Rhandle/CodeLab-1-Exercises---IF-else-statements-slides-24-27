@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int grade;
+	cout << "Enter student grade:" << endl;
+	cin >> grade;
+	if (grade >= 70 && grade <= 100) {
+		cout << "This student has an A" << endl;
+	}
+	else if (grade >= 60 && grade < 70) {
+		cout << "This student has a B" << endl;
+	}
+	else if (grade >= 50 && grade < 60) {
+		cout << "This student has a C" << endl;
+	}
+	else if (grade >= 40 && grade < 50) {
+		cout << "This student has a D" << endl;
+	}
+	else if (grade < 40 && grade >= 0) {
+		cout << "This student has an F" << endl;
+	}
+	else {
+		cout << "Invalid" << endl;
+	}
+	cin.get();
+	return 0;
+}
