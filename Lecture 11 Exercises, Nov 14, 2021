@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <string.h>
+
+using namespace std;
+void whileloop1() {
+	int x = 1;
+	int y = 1;
+	while (x <= 5) {
+		while (y <= x) {
+			cout << "*";
+			y++;
+		}
+		y = 0;
+		x--;
+		cout << endl;
+	}
+	int i = 1;
+	int j= 1;
+	while (i<= 5) {
+		while (j <= i) {
+			cout << "*";
+			j++;
+		}
+		j = 0;
+		i++;
+		cout << endl;
+	}
+}
+void whileloop2() {
+	int x, y = 1;
+	cout << "Enter a number for its factorial" << endl;
+	cin >> x;
+	for (int f = y; f <= x; f++) 
+		y *= f;
+	cout << y;
+}
+int main() {
+	whileloop2();
+	return 0;
+}
