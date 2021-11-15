@@ -1,0 +1,77 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <string.h>
+
+using namespace std;
+void reverse9loop() { //For Lesson 9 Exercises
+	int num = 108;
+	while (num >= 9) {
+		cout << num << endl;
+		num -= 9;
+	}
+}
+
+void uselesscontraption() {
+	int num;
+	cout << "Please enter either 1 or 2" << endl;
+	cin >> num;
+	while (num) {
+			if (num == 1) {
+				cout << "You have entered 1" << endl;
+				cin >> num;
+			}
+			else if (num == 2) {
+				cout << "You have entered 2" << endl;
+				cin >> num;
+			}
+			else{
+				cout << "Please enter either 1 or 2" << endl;
+				cin >> num;
+			}
+	}
+	cout << "You broke the simulation" << endl;
+}
+void imthedumdum() {
+char input;
+	do {
+		cout << "Would you like to quit? Y/N" << endl;
+		cin >> input;
+	} while (input != 'Y' && input != 'y');
+	cout << "You have quit. Congratulations" << endl;
+}
+void breakpass() {
+	int pass = 246, passat;
+	cout << "Enter passcode to enter" << endl;
+	cin >> passat;
+	do {
+		cout << "Enter passcode to enter" << endl;
+		cin.clear();
+		cin.ignore(10000, '\n');
+		cin >> passat;
+	} while (passat != pass);
+}
+void breakpass2() {
+	int pass = 246, passat, passlim = 5;
+	cout << "Enter passcode to enter" << endl;
+	cin >> passat;
+	do {
+		cout << "Enter passcode to enter" << endl;
+		cout << "You have " << passlim << " attempts left" << endl;
+		passlim--;
+		cin.clear();
+		cin.ignore(10000, '\n');
+		cin >> passat;
+		if (passlim == 0) {
+			cout << "Blocking access" << endl;
+			break;
+		}
+	} while (passat != pass);
+	if (passat == pass) {
+		cout << "Access granted" << endl;
+	}
+}
+int main(){
+  breakpass2();
+  return 0;
+}
