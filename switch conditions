@@ -1,0 +1,150 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <string.h>
+
+using namespace std;
+void switchmonth() { //For Lesson 8 Exercises
+	cout << "Please enter a number from 1-12 to indicate a month" << endl;
+	int month;
+	cin >> month;
+	switch (month) {
+	case 1:
+		cout << "January" << endl;
+		break;
+	case 2:
+		cout << "February" << endl;
+		break;
+	case 3:
+		cout << "March" << endl;
+		break;
+	case 4:
+		cout << "April" << endl;
+		break;
+	case 5:
+		cout << "May" << endl;
+		break;
+	case 6:
+		cout << "June" << endl;
+		break;
+	case 7:
+		cout << "July" << endl;
+		break;
+	case 8:
+		cout << "August" << endl;
+		break;
+	case 9:
+		cout << "September" << endl;
+		break;
+	case 10:
+		cout << "October" << endl;
+		break;
+	case 11:
+		cout << "November" << endl;
+		break;
+	case 12:
+		cout << "December" << endl;
+		break;
+	default:
+		cout << "Invalid input" << endl;
+		break;
+	}
+	return;
+}
+void fuelswitch() {
+	cout << "You are here to buy Fuel." << endl;
+	cout << "Enter what kind of fuel you are buying. P for Petrol, D for Diesel" << endl;
+	char fueltype;
+	cin >> fueltype;
+	cout << "Enter how many litres you need" << endl;
+	int fuellitre;
+	cin >> fuellitre;
+	double fuelprice;
+	if (fueltype == 'P' || fueltype == 'p') {
+		fuelprice = fuellitre * 2.42;
+		cout << "Your charge is: " << fuelprice << "AED" << endl;
+	}
+	else {
+		switch (fueltype) {
+		case 'd':
+		case 'D':
+			fuelprice = fuellitre * 2.51;
+			cout << "Your charge is: " << fuelprice << "AED" << endl;
+			break;
+		default:
+			cout << "Invalid Input" << endl;
+			break;
+		}
+	}
+}
+void switchtempchange() {
+	cout << "You are here to change the temperature from Fahrenheit to Celsius or Vice Versa" << endl;
+	cout << "Enter the type of temperature you want to translate to the other. F for Fahrenheit, C for Celsius" << endl;
+	char temptype;
+	cin >> temptype;
+	cout << "Enter the temperature" << endl;
+	double tempnum;
+	cin >> tempnum;
+	double tempchange;
+	switch (temptype) {
+	case 'F':
+	case 'f':
+		tempchange = (tempnum - 32) * 5/9;
+		cout << "From: " << tempnum << "F" << " To: " << tempchange << "C" << endl;
+		break;
+	case 'C':
+	case 'c':
+		tempchange = (tempnum * 9/5) + 32;
+		cout << "From: " << tempnum << "C" << " To: " << tempchange << "F" << endl;
+		break;
+	default:
+		cout << "Invalid Input" << endl;
+		break;
+	}
+}
+void reverse9loop() { //For Lesson 9 Exercises
+	int num = 108;
+	while (num >= 9) {
+		cout << num << endl;
+		num -= 9;
+	}
+}
+void switchgrade() {
+	cout << "Enter you grade from 0-100" << endl;
+	int grade;
+	cin >> grade;
+	int graderes = grade / 10;
+	switch (graderes) {
+	case 0:
+	case 1:
+	case 2:
+	case 3:
+		cout << "Your grade is F" << endl;
+		break;
+	case 4:
+		cout << "Your grade is E" << endl;
+		break;
+	case 5:
+		cout << "Your grade is D" << endl;
+		break;
+	case 6:
+		cout << "Your grade is C" << endl;
+		break;
+	case 7:
+		cout << "Your grade is B" << endl;
+		break;
+	case 8:
+	case 9:
+	case 10:
+		cout << "Your grade is A" << endl;
+		break;
+	default:
+		cout << "Invalid input/Not within the grading system" << endl;
+		break;
+	}
+}
+
+int main(){
+  switchgrade();
+  return 0;
+}
