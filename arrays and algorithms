@@ -54,10 +54,11 @@ void arraylib4() {
 	cout << "Amount of 6's: " << j;
 }
 void arraylib5() {
-	int randomArray[10];
+	array<int, 10> randomArray;
 	srand(time(0));
-	for (int x = 0; x < 10; x++) {
-		randomArray[x] = rand() % 10;
+	cout << "Enter 10 random numbers" << endl;
+	for (int x = 0; x < randomArray.size(); x++) {
+		cin >> randomArray[x];
 		if (randomArray[0] < randomArray[x]) {
 			randomArray[0] = randomArray[x];
 		}
@@ -65,7 +66,7 @@ void arraylib5() {
 			continue;
 		}
 	}
-	cout << randomArray[0] << endl;
+	cout << "Largest Number: " << randomArray[0] << endl;
 }
 int main()
 {
