@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <string.h>
+#include <array>
+#include <algorithm>
+
+using namespace std;
+int main(){
+  int num, x = 0, j = 1, g = 0;
+	string name;
+	cout << "Enter your full name" << endl;
+	getline(cin, name);
+	cout << "Enter a number" << endl;
+	cin >> num;
+	while (cin.fail()) {
+		cin.clear(num);
+		cin.ignore(10000, '\n');
+		cout << "Try again. Enter a number" << endl;
+		cin >> num;
+	}
+	cout << "Name: " << name << endl
+		<< "Number: " << num << endl;
+	cout << "Factorial of the number:" << endl;
+	while(x < num) {
+		x++;
+		j *= x;
+	}
+	cout << j << endl;
+	cout << "Table of input number multipled from 1-10" << endl;
+	do {
+		g++;
+		cout << num << " * " << g << " = " << num * g << endl;
+	} while (g < 10);
+	cout << "Table of exponent power from 0-10" << endl;
+	for (int v = 0; v <= 10; v++) {
+		cout << num << "^" << v << " = " << pow(num, v) << endl;
+	}
+  return 0;
+}
