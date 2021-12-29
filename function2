@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <string.h>
+#include <array>
+#include <algorithm>
+#include <time.h>
+#include <cmath>
+#include <math.h>
+
+using namespace std;
+string funcmath1(double rootinp) {
+	for (double x = 1; x <= 10; x++) {
+		double j,p = 1/x;
+		j = pow(rootinp, p);
+		cout <<  j << endl;
+	}
+	return "The code is completed";
+}
+string funcmath2(double expinp) {
+	for (int x = 1; x <= 10; x++) {
+		double j = pow(expinp, x);
+		cout << j << endl;
+	}
+	return "The code is completed";
+}
+void funcmathinp() {
+	double inp;
+	cout << "Enter a number: " << endl;
+	cin >> inp;
+	cout << funcmath1(inp) << endl;
+}
+int main(){
+	funcmathinp();
+	return 0;
+}
