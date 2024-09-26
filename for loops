@@ -1,0 +1,124 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <string.h>
+
+using namespace std;
+void forloopsslide12() {
+	string wordob;
+	cin >> wordob;
+	for (int i = 0; i < size(wordob); i++) {
+		cout << "Input: " << wordob.at(i) << endl;
+	}
+}
+void forloopsslide10() {
+	cout << "Counting program\n" <<
+		"Enter your option\n" <<
+		"a. 0-50\n" <<
+		"b. 50-0\n" <<
+		"c. 30-50\n" <<
+		"d. 50-10 in counts of 2\n" <<
+		"e. 100-200 in counts of 5\n";
+	char count;
+	int x;
+	cin >> count;
+	count = tolower(count);
+	while (count != 'a' && count != 'b' && count != 'c' && count != 'd' && count != 'e') {
+		cout << "Invalid input. Try again." << endl;
+		cin.clear();
+		cin.ignore(10000, '\n');
+		cin >> count;
+	}
+	switch (count) {
+	case 'a':
+		cout << "Counting from 0 to 50" << endl;
+		for (x = 0; x <= 50; x++) {
+			cout << x << endl;
+		}
+		break;
+	case 'b':
+		cout << "Counting from 50 to 0" << endl;
+		for (x = 50; x >= 0; x--) {
+			cout << x << endl;
+		}
+		break;
+	case 'c':
+		cout << "Counting from 30 to 50" << endl;
+		for (x = 30; x <= 50; x++) {
+			cout << x << endl;
+		}
+		break;
+	case 'd':
+		cout << "Counting from 50 to 10 in counts of 2" << endl;
+		for (x = 50; x >= 10; x -= 2) {
+			cout << x << endl;
+		}
+		break;
+	case 'e':
+		cout << "Counting from 100 to 200 in counts of 5" << endl;
+		for (x = 100; x <= 200; x += 5) {
+			cout << x << endl;
+		}
+		break;
+	default:
+		cout << "Invalid input" << endl;
+		break;
+	}
+}
+void forloopsexercise1() {
+	for (int i = 0; i < 7; i++) {
+		for (int x = i; x < 7; x++) {
+			cout << "*";
+		}
+		cout << endl;
+	}
+}
+void forloopsexercise2() {
+	for (int i = 0; i < 7; i++) {
+		for (int x = i; x >= 0 ; x--) {
+			cout << "*";
+		}
+		cout << endl;
+	}
+}
+void forloopsexercise3() {
+	for (int y = 0; y < 5; y++) {
+		for (int j = y; j >= 0; j--) {
+			cout << "*";
+		}
+		cout << endl;
+	}
+	for (int i = 0; i < 4; i++) {
+		for (int x = i; x < 4; x++){
+				
+			cout << "*";
+		}
+		cout << endl;
+	}
+}
+void forloopsexercise4() {
+	int cube;
+	cin >> cube;
+	for (int x = 1; x <= cube; x++) {
+		int res = pow(x, 3);
+		cout << "The cube of " << x << " is: " << res << endl;
+	}
+}
+void forloopsexercise5() {
+	int y = 0;
+	for (int x = 100; x <= 200; x++) {
+		int z = x % 9;
+		if (z == 0) {
+			cout << x << endl;
+			y += x;
+		}
+		else {
+			continue;
+		}
+	}
+	cout << "Sum: " << y << endl;
+}
+int main() {
+	forloopsexercise5();
+	return 0;
+}
